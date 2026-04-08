@@ -337,7 +337,7 @@ export default function App() {
           </div>
 
           <div className="cta-box">
-            <a className="btn btn-primary btn-large" href="mailto:hello@blipai.com">Request a Demo</a>
+            <a className="btn btn-primary btn-large" href="mailto:aneesh@insights3d.com">Request a Demo</a>
             <a className="btn btn-secondary btn-large" href="/sample-questionnaire.html" target="_blank" rel="noreferrer">View Sample Questionnaire</a>
             <p className="tiny-note">
               Replace the demo email with your actual email or booking link before publishing.
