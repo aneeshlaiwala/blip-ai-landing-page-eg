@@ -68,6 +68,13 @@ const audience = [
   'Survey operations and platform teams',
 ]
 
+const previewHighlights = [
+  'Researcher notes embedded under each question',
+  'Fraud checks and terminations clearly marked',
+  'Brand funnel, innovation, disruption, and product testing sections',
+  'Exportable HTML sample included inside this project',
+]
+
 export default function App() {
   return (
     <div className="page">
@@ -84,12 +91,12 @@ export default function App() {
           <nav className="nav">
             <a href="#capabilities">Capabilities</a>
             <a href="#workflow">Workflow</a>
-            <a href="#outputs">Outputs</a>
+            <a href="#preview">Sample Preview</a>
             <a href="#contact">Contact</a>
           </nav>
 
           <div className="nav-actions">
-            <a className="btn btn-secondary" href="#outputs">See Sample</a>
+            <a className="btn btn-secondary" href="/sample-questionnaire.html" target="_blank" rel="noreferrer">Open Sample</a>
             <a className="btn btn-primary" href="#contact">Request Demo</a>
           </div>
         </div>
@@ -112,7 +119,7 @@ export default function App() {
 
             <div className="hero-actions">
               <a className="btn btn-primary btn-large" href="#contact">Book a Demo</a>
-              <a className="btn btn-secondary btn-large" href="#outputs">See Sample Output</a>
+              <a className="btn btn-secondary btn-large" href="/sample-questionnaire.html" target="_blank" rel="noreferrer">See Sample Output</a>
             </div>
 
             <div className="checks">
@@ -241,6 +248,45 @@ export default function App() {
         </div>
       </section>
 
+      <section className="section" id="preview">
+        <div className="container">
+          <div className="section-intro">
+            <div className="eyebrow eyebrow-soft">Sample questionnaire</div>
+            <h2>Show prospects what a BLIP AI output actually looks like.</h2>
+            <p>
+              I incorporated your sample questionnaire into the project so the landing page now links to a live HTML output example.
+            </p>
+          </div>
+
+          <div className="preview-grid">
+            <div className="panel">
+              <h3 className="subhead">What the sample demonstrates</h3>
+              <div className="list">
+                {previewHighlights.map((item) => (
+                  <div className="list-item" key={item}>{item}</div>
+                ))}
+              </div>
+
+              <div className="hero-actions top-gap">
+                <a className="btn btn-primary btn-large" href="/sample-questionnaire.html" target="_blank" rel="noreferrer">Open Full Sample</a>
+                <a className="btn btn-secondary btn-large" href="/sample-questionnaire.html" download>Download HTML Sample</a>
+              </div>
+            </div>
+
+            <div className="preview-browser">
+              <div className="browser-top">
+                <span></span><span></span><span></span>
+              </div>
+              <iframe
+                title="BLIP AI Sample Questionnaire"
+                src="/sample-questionnaire.html"
+                className="preview-frame"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="section" id="outputs">
         <div className="container two-col">
           <div className="panel">
@@ -292,9 +338,9 @@ export default function App() {
 
           <div className="cta-box">
             <a className="btn btn-primary btn-large" href="mailto:hello@blipai.com">Request a Demo</a>
-            <a className="btn btn-secondary btn-large" href="#outputs">Download Sample Questionnaire</a>
+            <a className="btn btn-secondary btn-large" href="/sample-questionnaire.html" target="_blank" rel="noreferrer">View Sample Questionnaire</a>
             <p className="tiny-note">
-              Replace the demo email with your actual email or demo booking link before publishing.
+              Replace the demo email with your actual email or booking link before publishing.
             </p>
           </div>
         </div>
