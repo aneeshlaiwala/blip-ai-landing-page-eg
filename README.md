@@ -1,19 +1,19 @@
 # BLIP AI Landing Page
 
-A React + Vite landing page for BLIP AI.
+Updated React + Vite landing page for BLIP AI, now including a live sample questionnaire HTML preview.
+
+## Included
+- Professional landing page
+- BLIP AI logo wired correctly
+- Sample questionnaire file at `public/sample-questionnaire.html`
+- Landing page buttons that open the sample questionnaire
 
 ## Run locally
-
-1. Install Node.js 18 or later
-2. Open terminal in this folder
-3. Run:
 
 ```bash
 npm install
 npm run dev
 ```
-
-4. Open the local URL shown in terminal
 
 ## Build for production
 
@@ -21,6 +21,9 @@ npm run dev
 npm run build
 ```
 
-## Important
-- The logo file is already placed at `src/assets/blip-logo.png`
-- Replace the demo email link in `src/App.jsx` with your real email or booking URL
+## Important edits before publishing
+- Replace `mailto:hello@blipai.com` in `src/App.jsx` with your real email or booking link
+- If you want a different sample questionnaire, replace `public/sample-questionnaire.html`
+
+## Deployment
+Upload this folder to GitHub, then import the repo into Vercel.
