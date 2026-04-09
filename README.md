@@ -1,9 +1,8 @@
-# BLIP AI Landing Page v9
+# BLIP AI Landing Page v10
 
-This version is a proper correction rather than patch work:
-- removed the top hero pills completely
-- added a dedicated mobile navigation row so all top options remain visible on smaller screens
-- improved responsive behavior across header, hero, section labels, sample actions, and CTA blocks
-- kept the cleaner structure from the recent rebuild
-
-Replace the full repo contents with this version and redeploy.
+Updates in this version:
+- changed "About Blip" to "Blip AI" across the page
+- moved the Blip AI section header and text to the top of the section
+- ensured on mobile that the section intro appears before the four cards
+- improved hero headline readability by reducing tight letter spacing
+- kept mobile nav and previous responsive fixes
