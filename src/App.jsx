@@ -75,7 +75,7 @@ const previewHighlights = [
   'Exportable HTML sample included inside this project',
 ]
 
-const comingSoon = [
+const futureBlips = [
   {
     title: 'Synthetic data from questionnaires',
     text: 'Take your generated questionnaire and directly create synthetic data sets for early testing, demoing, and scenario modelling.',
@@ -136,6 +136,16 @@ const pricingPlans = [
   },
 ]
 
+const sectionMeta = {
+  about: { kicker: 'About BLIP AI' },
+  capabilities: { kicker: 'Why BLIP AI is different' },
+  workflow: { kicker: 'How it works' },
+  preview: { kicker: 'Sample questionnaire' },
+  future: { kicker: 'Future Blips' },
+  outputs: { kicker: 'Output quality' },
+  pricing: { kicker: 'Pricing' },
+}
+
 export default function App() {
   return (
     <div className="page">
@@ -154,8 +164,8 @@ export default function App() {
             <a href="#capabilities">Capabilities</a>
             <a href="#workflow">Workflow</a>
             <a href="#preview">Sample Preview</a>
+            <a href="#future-blips">Future Blips</a>
             <a href="#pricing">Pricing</a>
-            <a href="#contact">Contact</a>
           </nav>
 
           <div className="nav-actions">
@@ -165,7 +175,7 @@ export default function App() {
         </div>
       </header>
 
-      <section className="hero" id="top">
+      <section className="hero section-shell hero-shell" id="top">
         <div className="hero-bg hero-bg-1"></div>
         <div className="hero-bg hero-bg-2"></div>
         <div className="container hero-grid">
@@ -194,7 +204,7 @@ export default function App() {
           </div>
 
           <div className="about-card" id="about">
-            <div className="eyebrow eyebrow-soft">About BLIP AI</div>
+            <div className="eyebrow eyebrow-soft">{sectionMeta.about.kicker}</div>
             <h2>This is where AI meets market research.</h2>
             <p>
               BLIP AI’s vision is to create an entire AI-powered market research ecosystem that is fast,
@@ -211,7 +221,7 @@ export default function App() {
 
             <div className="about-actions">
               <a className="btn btn-primary btn-large" href="mailto:invest@blip-ai.io">Email invest@blip-ai.io</a>
-              <a className="btn btn-secondary btn-large" href="#coming-soon">Explore Vision</a>
+              <a className="btn btn-secondary btn-large" href="#future-blips">Explore Vision</a>
             </div>
 
             <div className="about-note">
@@ -238,10 +248,10 @@ export default function App() {
         </div>
       </section>
 
-      <section className="section" id="capabilities">
+      <section className="section section-shell capabilities-shell" id="capabilities">
         <div className="container">
           <div className="section-intro">
-            <div className="eyebrow eyebrow-soft">Why BLIP AI is different</div>
+            <div className="eyebrow eyebrow-soft">{sectionMeta.capabilities.kicker}</div>
             <h2>Built for real research rigor, not generic AI output.</h2>
             <p>
               BLIP AI is designed for serious market research teams that need relevance, structure,
@@ -261,10 +271,10 @@ export default function App() {
         </div>
       </section>
 
-      <section className="section section-alt" id="workflow">
+      <section className="section section-shell workflow-shell" id="workflow">
         <div className="container two-col">
           <div className="section-intro left">
-            <div className="eyebrow eyebrow-soft">How it works</div>
+            <div className="eyebrow eyebrow-soft">{sectionMeta.workflow.kicker}</div>
             <h2>A clean workflow from brief to questionnaire export.</h2>
             <p>
               BLIP AI works like a smart research partner, interpreting the study inputs
@@ -286,10 +296,10 @@ export default function App() {
         </div>
       </section>
 
-      <section className="section" id="preview">
+      <section className="section section-shell preview-shell" id="preview">
         <div className="container">
           <div className="section-intro">
-            <div className="eyebrow eyebrow-soft">Sample questionnaire</div>
+            <div className="eyebrow eyebrow-soft">{sectionMeta.preview.kicker}</div>
             <h2>Show prospects what a BLIP AI output actually looks like.</h2>
             <p>
               The live sample below demonstrates how BLIP AI outputs structured, research-ready questionnaires with analysis notes and modern export quality.
@@ -370,10 +380,10 @@ export default function App() {
         </div>
       </section>
 
-      <section className="section section-dark" id="coming-soon">
+      <section className="section section-shell future-shell" id="future-blips">
         <div className="container">
           <div className="section-intro section-intro-dark">
-            <div className="eyebrow eyebrow-dark">Coming soon</div>
+            <div className="eyebrow eyebrow-dark">{sectionMeta.future.kicker}</div>
             <h2>The beginning of a larger AI-powered MR ecosystem.</h2>
             <p>
               BLIP AI is not stopping at questionnaire generation. We are building an ecosystem designed to radically compress time-to-insight across quantitative and qualitative research workflows.
@@ -381,9 +391,8 @@ export default function App() {
           </div>
 
           <div className="coming-grid">
-            {comingSoon.map((item) => (
+            {futureBlips.map((item) => (
               <div className="coming-card" key={item.title}>
-                <div className="coming-badge">Coming Soon</div>
                 <h3>{item.title}</h3>
                 <p>{item.text}</p>
               </div>
@@ -392,10 +401,10 @@ export default function App() {
         </div>
       </section>
 
-      <section className="section" id="outputs">
+      <section className="section section-shell outputs-shell" id="outputs">
         <div className="container two-col">
           <div className="panel">
-            <div className="eyebrow eyebrow-soft">Output quality</div>
+            <div className="eyebrow eyebrow-soft">{sectionMeta.outputs.kicker}</div>
             <h2>Professional outputs ready for the next step in your workflow.</h2>
             <div className="list">
               {outputPoints.map((item) => (
@@ -424,10 +433,10 @@ export default function App() {
         </div>
       </section>
 
-      <section className="section pricing-section" id="pricing">
+      <section className="section section-shell pricing-shell" id="pricing">
         <div className="container">
           <div className="section-intro center">
-            <div className="eyebrow eyebrow-soft">Pricing</div>
+            <div className="eyebrow eyebrow-soft">{sectionMeta.pricing.kicker}</div>
             <h2>Simple, scalable pricing for every stage of growth.</h2>
             <p>
               Start lean, scale fast, and later connect the payment flow to Razorpay at the backend.
@@ -448,10 +457,7 @@ export default function App() {
                     <div className="price-point" key={point}>{point}</div>
                   ))}
                 </div>
-                <a
-                  className={plan.secondary ? 'btn btn-secondary btn-block' : 'btn btn-primary btn-block'}
-                  href="#contact"
-                >
+                <a className={plan.secondary ? 'btn btn-secondary btn-block' : 'btn btn-primary btn-block'} href="#contact">
                   {plan.cta}
                 </a>
               </div>
@@ -460,7 +466,7 @@ export default function App() {
         </div>
       </section>
 
-      <section className="section cta-section" id="contact">
+      <section className="section section-shell cta-section" id="contact">
         <div className="container cta">
           <div className="cta-copy">
             <a className="brand" href="#top">
