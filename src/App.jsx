@@ -75,34 +75,97 @@ const previewHighlights = [
   'Exportable HTML sample included inside this project',
 ]
 
+const comingSoon = [
+  {
+    title: 'Synthetic data from questionnaires',
+    text: 'Take your generated questionnaire and directly create synthetic data sets for early testing, demoing, and scenario modelling.',
+  },
+  {
+    title: 'Instant report generation',
+    text: 'Move from survey output to polished insight summaries, visuals, and story-ready reporting in far less time.',
+  },
+  {
+    title: 'Blip QPro',
+    text: 'Qualitative data analytics for modern research teams: test hypotheses with synthetic FGDs, generate instant qual reports from transcripts, and unlock advanced verbatim analytics.',
+  },
+]
+
+const pricingPlans = [
+  {
+    name: 'Starter',
+    price: '$49',
+    period: '/mo',
+    tag: '',
+    points: [
+      '20 AI-generated questionnaires',
+      'Basic skip logic and exports',
+      'Sample questionnaire preview',
+      'Email support',
+    ],
+    cta: 'Get Started',
+    secondary: false,
+  },
+  {
+    name: 'Professional',
+    price: '$199',
+    period: '/mo',
+    tag: 'Most Popular',
+    points: [
+      'Unlimited generation',
+      'Advanced logic branching',
+      'Analysis mapping and fraud layer',
+      'Direct integrations and priority support',
+    ],
+    cta: 'Request Demo',
+    secondary: false,
+    featured: true,
+  },
+  {
+    name: 'Enterprise',
+    price: 'Custom',
+    period: '',
+    tag: '',
+    points: [
+      'Custom workflows and model tuning',
+      'API and enterprise deployment',
+      'Razorpay-ready subscription flow',
+      'Dedicated onboarding and partnership support',
+    ],
+    cta: 'Contact Sales',
+    secondary: true,
+  },
+]
+
 export default function App() {
   return (
     <div className="page">
       <header className="topbar">
         <div className="container topbar-inner">
-          <div className="brand">
+          <a className="brand" href="#top">
             <img src={logo} alt="BLIP AI logo" className="brand-logo" />
             <div>
               <div className="brand-name">BLIP AI</div>
               <div className="brand-tagline">Where signals generate your insights</div>
             </div>
-          </div>
+          </a>
 
           <nav className="nav">
+            <a href="#about">About</a>
             <a href="#capabilities">Capabilities</a>
             <a href="#workflow">Workflow</a>
             <a href="#preview">Sample Preview</a>
+            <a href="#pricing">Pricing</a>
             <a href="#contact">Contact</a>
           </nav>
 
           <div className="nav-actions">
-            <a className="btn btn-secondary" href="/sample-questionnaire.html" target="_blank" rel="noreferrer">Open Sample</a>
+            <a className="btn btn-ghost" href="#login">Login</a>
             <a className="btn btn-primary" href="#contact">Request Demo</a>
           </div>
         </div>
       </header>
 
-      <section className="hero">
+      <section className="hero" id="top">
         <div className="hero-bg hero-bg-1"></div>
         <div className="hero-bg hero-bg-2"></div>
         <div className="container hero-grid">
@@ -130,54 +193,29 @@ export default function App() {
             </div>
           </div>
 
-          <div className="hero-card-wrap">
-            <div className="hero-card">
-              <div className="hero-card-head">
-                <div className="hero-card-brand">
-                  <img src={logo} alt="BLIP AI" className="card-logo" />
-                  <div>
-                    <div className="card-title">BLIP AI Questionnaire Engine</div>
-                    <div className="card-tag">Where signals generate your insights</div>
-                  </div>
-                </div>
-                <span className="status-pill">Live intelligence layer</span>
-              </div>
+          <div className="about-card" id="about">
+            <div className="eyebrow eyebrow-soft">About BLIP AI</div>
+            <h2>This is where AI meets market research.</h2>
+            <p>
+              BLIP AI’s vision is to create an entire AI-powered market research ecosystem that is fast,
+              efficient, and innovative — with no legacy tech stack holding it back.
+            </p>
+            <p>
+              We are building for modern research teams that want sharper tools, faster outputs, and a fundamentally
+              different operating model for the MR ecosystem.
+            </p>
+            <p>
+              We are looking for partners who share our vision and want to help disrupt the market research ecosystem.
+              If this resonates, let’s get on a call.
+            </p>
 
-              <div className="mini-grid">
-                <div className="mini-box">
-                  <span>Country</span>
-                  <strong>Canada</strong>
-                </div>
-                <div className="mini-box">
-                  <span>Category</span>
-                  <strong>Electric Vehicles</strong>
-                </div>
-                <div className="mini-box">
-                  <span>Target Group</span>
-                  <strong>18–45 urban commuters</strong>
-                </div>
-                <div className="mini-box">
-                  <span>LOI</span>
-                  <strong>20 minutes</strong>
-                </div>
-              </div>
+            <div className="about-actions">
+              <a className="btn btn-primary btn-large" href="mailto:invest@blip-ai.io">Email invest@blip-ai.io</a>
+              <a className="btn btn-secondary btn-large" href="#coming-soon">Explore Vision</a>
+            </div>
 
-              <div className="signal-panel">
-                <div className="signal-header">
-                  <div>
-                    <div className="signal-title">Questionnaire intelligence generated</div>
-                    <div className="signal-subtitle">Context-aware signals built into the instrument</div>
-                  </div>
-                  <span className="export-pill">Word · HTML · JSON</span>
-                </div>
-
-                <div className="signal-list">
-                  <div className="signal-item">Local EV brands and competitive frame included</div>
-                  <div className="signal-item">Policy shifts and charging infrastructure cues surfaced</div>
-                  <div className="signal-item">Fraud checks and skip logic inserted</div>
-                  <div className="signal-item">Question-level analytics guidance mapped</div>
-                </div>
-              </div>
+            <div className="about-note">
+              Fast. Efficient. Innovative. Built natively for AI-first research workflows.
             </div>
           </div>
         </div>
@@ -254,13 +292,58 @@ export default function App() {
             <div className="eyebrow eyebrow-soft">Sample questionnaire</div>
             <h2>Show prospects what a BLIP AI output actually looks like.</h2>
             <p>
-              I incorporated your sample questionnaire into the project so the landing page now links to a live HTML output example.
+              The live sample below demonstrates how BLIP AI outputs structured, research-ready questionnaires with analysis notes and modern export quality.
             </p>
           </div>
 
           <div className="preview-grid">
             <div className="panel">
-              <h3 className="subhead">What the sample demonstrates</h3>
+              <div className="sample-header">
+                <div className="sample-brand">
+                  <img src={logo} alt="BLIP AI" className="card-logo" />
+                  <div>
+                    <div className="subhead">BLIP AI Questionnaire Engine</div>
+                    <div className="muted-line">Where signals generate your insights</div>
+                  </div>
+                </div>
+                <span className="status-pill">Live intelligence layer</span>
+              </div>
+
+              <div className="mini-grid top-gap-sm">
+                <div className="mini-box">
+                  <span>Country</span>
+                  <strong>Canada</strong>
+                </div>
+                <div className="mini-box">
+                  <span>Category</span>
+                  <strong>Electric Vehicles</strong>
+                </div>
+                <div className="mini-box">
+                  <span>Target Group</span>
+                  <strong>18–45 urban commuters</strong>
+                </div>
+                <div className="mini-box">
+                  <span>LOI</span>
+                  <strong>20 minutes</strong>
+                </div>
+              </div>
+
+              <div className="signal-panel">
+                <div className="signal-header">
+                  <div>
+                    <div className="signal-title">Questionnaire intelligence generated</div>
+                    <div className="signal-subtitle">Context-aware signals built into the instrument</div>
+                  </div>
+                  <span className="export-pill">Word · HTML · JSON</span>
+                </div>
+                <div className="signal-list">
+                  <div className="signal-item">Local EV brands and competitive frame included</div>
+                  <div className="signal-item">Policy shifts and charging infrastructure cues surfaced</div>
+                  <div className="signal-item">Fraud checks and skip logic inserted</div>
+                  <div className="signal-item">Question-level analytics guidance mapped</div>
+                </div>
+              </div>
+
               <div className="list">
                 {previewHighlights.map((item) => (
                   <div className="list-item" key={item}>{item}</div>
@@ -283,6 +366,28 @@ export default function App() {
                 className="preview-frame"
               />
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="section section-dark" id="coming-soon">
+        <div className="container">
+          <div className="section-intro section-intro-dark">
+            <div className="eyebrow eyebrow-dark">Coming soon</div>
+            <h2>The beginning of a larger AI-powered MR ecosystem.</h2>
+            <p>
+              BLIP AI is not stopping at questionnaire generation. We are building an ecosystem designed to radically compress time-to-insight across quantitative and qualitative research workflows.
+            </p>
+          </div>
+
+          <div className="coming-grid">
+            {comingSoon.map((item) => (
+              <div className="coming-card" key={item.title}>
+                <div className="coming-badge">Coming Soon</div>
+                <h3>{item.title}</h3>
+                <p>{item.text}</p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -319,16 +424,52 @@ export default function App() {
         </div>
       </section>
 
+      <section className="section pricing-section" id="pricing">
+        <div className="container">
+          <div className="section-intro center">
+            <div className="eyebrow eyebrow-soft">Pricing</div>
+            <h2>Simple, scalable pricing for every stage of growth.</h2>
+            <p>
+              Start lean, scale fast, and later connect the payment flow to Razorpay at the backend.
+            </p>
+          </div>
+
+          <div className="pricing-grid">
+            {pricingPlans.map((plan) => (
+              <div className={plan.featured ? 'price-card featured' : 'price-card'} key={plan.name}>
+                {plan.tag ? <div className="price-tag">{plan.tag}</div> : null}
+                <div className="price-name">{plan.name}</div>
+                <div className="price-row">
+                  <span className="price-value">{plan.price}</span>
+                  <span className="price-period">{plan.period}</span>
+                </div>
+                <div className="price-points">
+                  {plan.points.map((point) => (
+                    <div className="price-point" key={point}>{point}</div>
+                  ))}
+                </div>
+                <a
+                  className={plan.secondary ? 'btn btn-secondary btn-block' : 'btn btn-primary btn-block'}
+                  href="#contact"
+                >
+                  {plan.cta}
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="section cta-section" id="contact">
         <div className="container cta">
           <div className="cta-copy">
-            <div className="brand">
+            <a className="brand" href="#top">
               <img src={logo} alt="BLIP AI logo" className="brand-logo small" />
               <div>
                 <div className="brand-name">BLIP AI</div>
                 <div className="brand-tagline">Where signals generate your insights</div>
               </div>
-            </div>
+            </a>
             <h2>Ready to make your questionnaire design smarter, faster, and more market-aware?</h2>
             <p>
               Show your teams how AI can improve research design quality with country context,
@@ -337,10 +478,11 @@ export default function App() {
           </div>
 
           <div className="cta-box">
-            <a className="btn btn-primary btn-large" href="mailto:aneesh@insights3d.com">Request a Demo</a>
-            <a className="btn btn-secondary btn-large" href="/sample-questionnaire.html" target="_blank" rel="noreferrer">View Sample Questionnaire</a>
+            <a className="btn btn-primary btn-large btn-block" href="mailto:invest@blip-ai.io?subject=Request%20a%20Demo%20for%20BLIP%20AI">Request a Demo</a>
+            <a className="btn btn-secondary btn-large btn-block" href="/sample-questionnaire.html" target="_blank" rel="noreferrer">View Sample Questionnaire</a>
+            <a className="btn btn-ghost btn-large btn-block" id="login" href="#top">Login</a>
             <p className="tiny-note">
-              Replace the demo email with your actual email or booking link before publishing.
+              For demos, partnerships, or ecosystem conversations, write to <strong>invest@blip-ai.io</strong>.
             </p>
           </div>
         </div>
