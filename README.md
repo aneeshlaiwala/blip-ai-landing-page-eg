@@ -1,10 +1,11 @@
-# BLIP AI Landing Page v4
+# BLIP AI Landing Page v5
 
-Changes in this version:
-- replaced top nav 'Contact' with 'Future Blips'
-- removed repeated 'Coming Soon' pills from the Future Blips cards
-- increased section-title hierarchy
-- added stronger section separation using shells, contrast, spacing, and depth
-- improved overall visual rhythm so sections feel less like a document and more like a premium SaaS site
+Major revamp:
+- simplified hero so the opening message is the sole focus
+- changed top nav item from Workflow to About Blip
+- removed repeated demo/sample CTAs from the hero and kept them in the sample section + final CTA
+- moved partner message from About Blip to Future Blips
+- redesigned sections to alternate light/dark/gradient for stronger contrast and less clutter
+- rebuilt the page structure to feel more like a premium SaaS site and less like a document
 
-Deploy by replacing the full project contents in GitHub and letting Vercel redeploy.
+Replace the full project contents in GitHub with this version and let Vercel redeploy.
