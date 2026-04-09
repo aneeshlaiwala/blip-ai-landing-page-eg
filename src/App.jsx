@@ -12,7 +12,7 @@ const capabilities = [
   },
   {
     title: 'Analysis-ready design',
-    text: 'Questions are aligned to segmentation, driver analysis, regression, clustering, and cross-tab use cases.',
+    text: 'Questions are aligned to segmentation, driver analysis, regression, clustering, and cross-tab needs.',
   },
   {
     title: 'Export-ready output',
@@ -76,6 +76,14 @@ const pricingPlans = [
   },
 ]
 
+const navItems = [
+  ['About Blip', '#about'],
+  ['Capabilities', '#capabilities'],
+  ['Sample Preview', '#sample'],
+  ['Future Blips', '#future'],
+  ['Pricing', '#pricing'],
+]
+
 export default function App() {
   return (
     <div className="page">
@@ -89,17 +97,25 @@ export default function App() {
             </div>
           </a>
 
-          <nav className="nav">
-            <a href="#about">About Blip</a>
-            <a href="#capabilities">Capabilities</a>
-            <a href="#sample">Sample Preview</a>
-            <a href="#future">Future Blips</a>
-            <a href="#pricing">Pricing</a>
+          <nav className="nav desktop-nav">
+            {navItems.map(([label, href]) => (
+              <a key={label} href={href}>{label}</a>
+            ))}
           </nav>
 
           <div className="nav-actions">
             <a className="btn btn-soft" href="#login">Login</a>
             <a className="btn btn-primary" href="#contact">Request Demo</a>
+          </div>
+        </div>
+
+        <div className="mobile-nav-wrap">
+          <div className="container">
+            <nav className="mobile-nav" aria-label="Mobile section navigation">
+              {navItems.map(([label, href]) => (
+                <a key={label} href={href}>{label}</a>
+              ))}
+            </nav>
           </div>
         </div>
       </header>
@@ -112,11 +128,6 @@ export default function App() {
           <p>
             BLIP AI transforms complex market research requirements into structured, context-aware quantitative questionnaires grounded in country context, category intelligence, local brands, regulations, cultural nuance, and real market shifts.
           </p>
-          <div className="hero-pills">
-            <span>Country-aware</span>
-            <span>Research-grade logic</span>
-            <span>Analysis-ready design</span>
-          </div>
         </div>
       </section>
 
