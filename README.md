@@ -1,22 +1,10 @@
-# BLIP AI Landing Page v3
+# BLIP AI Landing Page v4
 
-This version includes:
-- stronger visual hierarchy
-- larger section labels and headings
-- About BLIP AI section in the hero area
-- sample questionnaire engine card moved into the sample section
-- Coming Soon ecosystem section
-- pricing section
-- Login button in the top navigation
-- fixed Request a Demo button using `mailto:invest@blip-ai.io`
+Changes in this version:
+- replaced top nav 'Contact' with 'Future Blips'
+- removed repeated 'Coming Soon' pills from the Future Blips cards
+- increased section-title hierarchy
+- added stronger section separation using shells, contrast, spacing, and depth
+- improved overall visual rhythm so sections feel less like a document and more like a premium SaaS site
 
-## Run locally
-```bash
-npm install
-npm run dev
-```
-
-## Before publishing
-- Replace any placeholder login flow with your real login URL
-- Connect pricing CTAs to Razorpay later
-- Replace or crop logo file if you want a cleaner horizontal navbar version
+Deploy by replacing the full project contents in GitHub and letting Vercel redeploy.
