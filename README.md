@@ -1,29 +1,22 @@
-# BLIP AI Landing Page
+# BLIP AI Landing Page v3
 
-Updated React + Vite landing page for BLIP AI, now including a live sample questionnaire HTML preview.
-
-## Included
-- Professional landing page
-- BLIP AI logo wired correctly
-- Sample questionnaire file at `public/sample-questionnaire.html`
-- Landing page buttons that open the sample questionnaire
+This version includes:
+- stronger visual hierarchy
+- larger section labels and headings
+- About BLIP AI section in the hero area
+- sample questionnaire engine card moved into the sample section
+- Coming Soon ecosystem section
+- pricing section
+- Login button in the top navigation
+- fixed Request a Demo button using `mailto:invest@blip-ai.io`
 
 ## Run locally
-
 ```bash
 npm install
 npm run dev
 ```
 
-## Build for production
-
-```bash
-npm run build
-```
-
-## Important edits before publishing
-- Replace `mailto:hello@blipai.com` in `src/App.jsx` with your real email or booking link
-- If you want a different sample questionnaire, replace `public/sample-questionnaire.html`
-
-## Deployment
-Upload this folder to GitHub, then import the repo into Vercel.
+## Before publishing
+- Replace any placeholder login flow with your real login URL
+- Connect pricing CTAs to Razorpay later
+- Replace or crop logo file if you want a cleaner horizontal navbar version
