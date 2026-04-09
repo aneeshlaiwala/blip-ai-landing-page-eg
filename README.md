@@ -1,10 +1,9 @@
-# BLIP AI Landing Page v8
+# BLIP AI Landing Page v9
 
-Updates in this version:
-- improved mobile responsiveness
-- larger section header pills
-- section labels increased to feel much stronger visually
-- tighter mobile spacing for header, hero, cards, and CTA blocks
-- buttons and sample actions stack properly on smaller screens
+This version is a proper correction rather than patch work:
+- removed the top hero pills completely
+- added a dedicated mobile navigation row so all top options remain visible on smaller screens
+- improved responsive behavior across header, hero, section labels, sample actions, and CTA blocks
+- kept the cleaner structure from the recent rebuild
 
 Replace the full repo contents with this version and redeploy.
